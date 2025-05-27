@@ -2,15 +2,19 @@ from langchain.schema import Document
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores.chroma import Chroma
 from langchain_openai.embeddings import OpenAIEmbeddings
+from langchain_community.document_loaders import PyPDFLoader
 from config import OPENAI_API_KEY
+import os
 
 def carregar_documentos():
-    texto = """
-    Não. O TCC do BES é individual. O projeto pode ser composto por mais de um acadêmico, entretanto as avaliações e a monografia a ser escrita deve ser um trabalho individual a ser supervisionado por um orientador.
-
-
-    """  # Você pode carregar de arquivo também se preferir
-    return [Document(page_content=texto, metadata={"autor": "UTFPR", "source": "www.utfpr.edu.br"})]
+    pasta_pdfs = os.path.join(os.getcwd(), "pdfs")
+    documentos = []
+    for nome_arquivo in os.listdir(pasta_pdfs):
+        if nome_arquivo.lower().endswith(".pdf"):
+            caminho_pdf = os.path.join(pasta_pdfs, nome_arquivo)
+            loader = PyPDFLoader(caminho_pdf)
+            documentos.extend(loader.load())
+    return documentos
 
 def gerar_chunks(documents):
     splitter = RecursiveCharacterTextSplitter(

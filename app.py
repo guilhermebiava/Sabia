@@ -3,20 +3,30 @@ from streamlit_chat import message
 import requests
 from ingest import carregar_documentos, gerar_chunks, criar_vetores
 from rag import gerar_resposta
-import streamlit as st
 from st_chat_message import message
 
 dbCarregado = False
 
 st.set_page_config(
-    page_title="Streamlit Chat - Demo",
-    page_icon=":robot:"
+    page_title="Sabiá - Assistente Virtual",
+    page_icon="🐦",  
 )
 
-#API_URL = "https://api-inference.huggingface.co/models/facebook/blenderbot-400M-distill"
-#headers = {"Authorization": st.secrets['api_key']}
+st.markdown(
+    """
+    <style>
+    .centered-header {
+        text-align: center;
+        font-size: 2.5em;
+        font-weight: bold;
+        margin-bottom: 1em;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
-st.header("Sabiá - Assistente Virtual")
+st.markdown('<div class="centered-header">Sabiá - Assistente Virtual da UTFPR</div>', unsafe_allow_html=True)
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
@@ -29,11 +39,7 @@ if not dbCarregado:
     chunks = gerar_chunks(documentos)
     db = criar_vetores(chunks)
 
-##	response = requests.post(API_URL, headers=headers, json=payload)
-#	return payload
-
 def get_text():
-    #input_text = st.text_input("You: ","", key="input")
     input_text = st.chat_input("Como eu posso ajudar hoje?")
     return input_text 
 
@@ -45,7 +51,26 @@ if user_input:
     st.session_state.generated.append(output)
 
 if st.session_state['generated']:
-
     for i in range(len(st.session_state['generated'])):
-        message(st.session_state['past'][i], is_user=True, key=str(i) + '_user')
-        message(st.session_state["generated"][i], key=str(i))
+        st.markdown(
+            f"""
+            <div style='display: flex; justify-content: flex-end; margin-bottom: 0.8em;'>
+                <div style='display: flex; align-items: center;'>
+                    <div style='margin-right: 8px; background: #e6e6e6; border-radius: 8px; padding: 6px 10px; font-size: 1em; text-align: right;'>{st.session_state['past'][i]}</div>
+                    <span style='font-size:1.3em;'>{'🙂'}</span>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
+        st.markdown(
+            f"""
+            <div style='display: flex; justify-content: flex-start; margin-bottom: 1.5em;'>
+                <div style='display: flex; align-items: center;'>
+                    <span style='font-size:1.3em;'>{'🐦'}</span>
+                    <div style='margin-left: 8px; background: #f0f0ff; border-radius: 8px; padding: 6px 10px; font-size: 1em; text-align: left;'>{st.session_state['generated'][i]}</div>
+                </div>
+            </div>
+            """,
+            unsafe_allow_html=True
+        )
