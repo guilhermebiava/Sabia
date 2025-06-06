@@ -6,7 +6,7 @@ Sabiá é um assistente virtual desenvolvido para auxiliar estudantes e professo
 
 ## 🌱 Por que “Sabiá”?
 
-O **sabiá-laranjeira** é a ave símbolo do Paraná, famosa pelo seu canto harmonioso e presença marcante na fauna brasileira. Assim como a ave, nosso assistente busca **comunicar-se de forma clara e eficiente**, promovendo o conhecimento de forma acessível para toda a comunidade acadêmica.
+O **sabiá** é uma ave amplamente admirada no Paraná, associada à beleza, liberdade e à conexão com a natureza. Seu canto inspira sensibilidade e tradição, sendo frequentemente presente na cultura popular e na memória afetiva dos paranaenses. Escolher o nome “Sabiá” para este projeto é uma forma de homenagear esse símbolo regional, reforçando os laços entre inovação tecnológica e identidade cultural. **O objetivo do Sabiá é promover o conhecimento de forma acessível para toda a comunidade acadêmica.**
 
 ---
 
@@ -15,7 +15,7 @@ O **sabiá-laranjeira** é a ave símbolo do Paraná, famosa pelo seu canto harm
 Este projeto foi criado para ser:
 
 ✅ **Fácil de implementar**  
-🎨 **Altamente personalizável**  
+🎨 **Personalizável**  
 🏫 **Adaptável a qualquer universidade ou instituição**
 
 Você pode:
@@ -75,7 +75,7 @@ git checkout -b minha-versao-sabia
 
 ```bash
 python -m venv venv
-.env\Scriptsctivate   # Windows
+.venv\Scripts\activate   # Windows
 ```
 
 ### 3️⃣ Instale as dependências:
