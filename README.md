@@ -1,121 +1,179 @@
-python -m venv venv
+# 🐦 Sabiá – Assistente Virtual Universitário
 
-.\venv\Scripts\activate
+Sabiá é um assistente virtual desenvolvido para auxiliar estudantes e professores da **UTFPR** com informações institucionais como regulamentos, documentos e outros conteúdos relevantes — de forma **rápida, simples e inteligente**.
 
-pip install -r requirements.txt
+---
 
-set OPENAI_API_KEY=sua-chave-aqui
+## 🌱 Por que “Sabiá”?
 
-python main.py
+O **sabiá-laranjeira** é a ave símbolo do Paraná, famosa pelo seu canto harmonioso e presença marcante na fauna brasileira. Assim como a ave, nosso assistente busca **comunicar-se de forma clara e eficiente**, promovendo o conhecimento de forma acessível para toda a comunidade acadêmica.
 
-🐦 Sabiá – Assistente Virtual Universitário
-Sabiá é um assistente virtual feito para auxiliar estudantes e professores da UTFPR com informações sobre regulamentos, documentos e outros conteúdos institucionais, de forma simples e inteligente.
+---
 
-🌱 Por que “Sabiá”?
-O sabiá-laranjeira é a ave símbolo do Paraná, conhecida por seu canto melodioso e presença marcante na fauna brasileira. Assim como a ave, nosso assistente tem como missão comunicar-se de forma clara e eficiente, trazendo conhecimento para quem precisa, quando precisa.
+## 🚀 Sobre o Projeto
 
-🚀 Sobre o Projeto
-Este projeto foi desenvolvido com foco em facilidade de implementação e personalização. Você pode:
+Este projeto foi criado para ser:
 
-Personalizar o comportamento do assistente
+✅ **Fácil de implementar**  
+🎨 **Altamente personalizável**  
+🏫 **Adaptável a qualquer universidade ou instituição**
 
-Adaptar o visual da interface
+Você pode:
 
-Treinar o modelo com os documentos da sua própria universidade
+- Personalizar o comportamento do assistente
+- Adaptar o visual da interface
+- Treinar o modelo com documentos da sua universidade
 
-Perfeito para outras instituições que desejam criar seu próprio IA acadêmico! 💡
+> ✨ Ideal para qualquer instituição que deseje seu próprio assistente acadêmico com IA!
 
-⚙️ Tecnologias Utilizadas
-🐍 Python 3.9
+---
 
-🖥️ Streamlit – Interface interativa
+## ⚙️ Tecnologias Utilizadas
 
-🧠 OpenRouter – Acesso a múltiplos modelos de linguagem
+- 🐍 **Python 3.9**
+- 🖥️ **Streamlit** — Interface web interativa
+- 🧠 **OpenRouter** — Acesso a múltiplos LLMs
+- 🧩 **ChromaDB** — Armazenamento vetorial
+- 🔍 **OpenAI Embeddings**
+- 🔧 **LangChain**
 
-🧩 ChromaDB – Armazenamento vetorial
+---
 
-🔍 OpenAI Embeddings
+## 📁 Estrutura do Projeto
 
-🔧 LangChain
-
-📁 Estrutura do Projeto
-📂 Sabia/
+```
+📂 projeto-sabia/
 │
-├── 📁 __pycache__/           # Arquivos temporários gerados automaticamente pelo Python
-├── 📁 .vscode/               # Configurações do editor VS Code (opcional)
-├── 📁 db/                    # Armazena o banco vetorial (ChromaDB)
-├── 📁 pdfs/                  # Coloque aqui os documentos da universidade para o treinamento
-├── 📁 venv/                  # Ambiente virtual (não incluir no versionamento)
+├── 📁 __pycache__/           # Arquivos temporários do Python
+├── 📁 .vscode/               # Configurações do VS Code (opcional)
+├── 📁 db/                    # Banco vetorial (ChromaDB)
+├── 📁 pdfs/                  # Coloque aqui os PDFs da universidade
+├── 📁 venv/                  # Ambiente virtual (não versionar)
 │
 ├── app.py                   # Interface principal com Streamlit
-├── config.py                # Onde você define suas chaves de API
-├── ingest.py                # Script para processar os PDFs e gerar embeddings
-├── prompt.py                # Define a personalidade e comportamento do assistente
-├── rag.py                   # Lógica principal de Resposta com Recuperação (RAG)
-├── requirements.txt         # Lista de dependências do projeto
-├── readme.txt               # (Substitua por README.md se quiser mostrar bonito no GitHub
+├── config.py                # Armazena as chaves da API
+├── ingest.py                # Processamento e embeddings dos PDFs
+├── prompt.py                # Personalização do comportamento da IA
+├── rag.py                   # Lógica principal de resposta RAG
+├── requirements.txt         # Dependências do projeto
+├── README.md                # Este arquivo
+```
 
-🛠️ Como Rodar Localmente
-Clone o repositório:
-    git clone https://github.com/seu-usuario/projeto-sabia.git
-    cd projeto-sabia
-    git checkout -b minha-versao-sabia
+---
 
-Crie o ambiente virtual:
-    python -m venv venv
-    .\venv\Scripts\activate
+## 🛠️ Como Rodar Localmente
 
-Instale as dependências:
-    pip install -r requirements.txt
+### 1️⃣ Clone o repositório:
 
-Crie o arquivo config.py com o seguinte conteúdo:
-    OPENROUTER_API_KEY = "sua-chave-openrouter-aqui"
-    OPENAI_API_KEY = "sua-chave-openai-aqui"
+```bash
+git clone https://github.com/seu-usuario/projeto-sabia.git
+cd projeto-sabia
+git checkout -b minha-versao-sabia
+```
 
-Inicie o app:
-    streamlit run app.py
+### 2️⃣ Crie e ative o ambiente virtual:
 
-🧠 Treinando o Modelo com Seus Documentos
-    1. Coloque regulamentos, manuais e documentos da sua universidade na pasta /pdfs.
-    2. Eles serão usados para criar os embeddings e alimentar a IA com informações reais.
+```bash
+python -m venv venv
+.env\Scriptsctivate   # Windows
+```
 
-🧩 Personalização
-🎨 Interface (app.py)
+### 3️⃣ Instale as dependências:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4️⃣ Configure suas chaves:
+
+Crie o arquivo `config.py` com este conteúdo:
+
+```python
+OPENROUTER_API_KEY = "sua-chave-openrouter-aqui"
+OPENAI_API_KEY = "sua-chave-openai-aqui"
+```
+
+> 🔐 Ambas as chaves são opcionais, dependendo do modelo e embeddings que você quiser usar.
+
+### 5️⃣ Inicie o aplicativo:
+
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🧠 Treinando o Modelo com Seus Documentos
+
+1. Coloque seus **regulamentos, manuais e documentos institucionais** na pasta `/pdfs`
+2. Rode o script `ingest.py` para criar os embeddings com base nesses documentos
+
+---
+
+## 🧩 Personalização
+
+### 🎨 Interface – `app.py`
 Você pode personalizar:
-    1. Nome da página (st.set_page_config)
-    2. Ícones e cores
-    3. Títulos, placeholders, mensagens
+- Nome da página (`st.set_page_config`)
+- Ícones e cores
+- Títulos, mensagens e placeholders
 
-🧠 Comportamento da IA (prompt.py)
-Edite o template.py para mudar:
-    Tom da resposta (formal, amigável, engraçado etc.)
-    Persona (assistente institucional, colega de sala, professor etc.)
+### 🧠 Comportamento da IA – `prompt.py`
+Altere o template para definir:
+- Tom de voz (formal, casual, divertido...)
+- Persona (ex: professor, colega de classe, bot neutro...)
 
-🤖 RAG (rag.py)
-A função gerar_resposta() pode ser ajustada nos seguintes pontos:
-context = db.similarity_search_with_relevance_scores(user_query, k=3)  # 🔢 Altere o valor de 'k' para mais ou menos documentos
-context = list(filter(lambda x: x[1] >= 0.5, context))                 # 🎯 Ajuste o threshold de relevância
-modelo="gpt-4o-mini"                                                   # 🤖 Troque o modelo (gpt-3.5-turbo, mixtral, etc.)
+### 🤖 Resposta da IA – `rag.py`
 
-🔐 Autenticação
-🔑 OpenRouter
-Crie sua chave aqui e adicione em config.py.
+A função `gerar_resposta()` pode ser customizada nos pontos abaixo:
 
-🔑 OpenAI (para embeddings ou modelos da OpenAI)
-Crie sua chave aqui e adicione em config.py.
+```python
+context = db.similarity_search_with_relevance_scores(user_query, k=3)  # 🔢 Número de documentos considerados
+context = list(filter(lambda x: x[1] >= 0.5, context))                 # 🎯 Threshold de relevância
+modelo = "gpt-4o-mini"                                                 # 🤖 Modelo utilizado (ex: gpt-3.5, mixtral...)
+```
 
+Você pode:
+- Alterar o número de documentos (`k`)
+- Ajustar a pontuação mínima de relevância
+- Trocar o modelo por outro disponível no OpenRouter ou OpenAI
 
-✨ Adapte como Quiser!
-O Sabiá foi criado pensando em flexibilidade. Você pode:
+---
 
-Usar outra base vetorial (Pinecone, FAISS...)
+## 🔐 Autenticação
 
-Substituir o modelo por outro (Claude, Mixtral, etc.)
+### 🗝️ OpenRouter
+Crie uma conta e gere sua chave em: https://openrouter.ai  
+Adicione a chave no `config.py`
 
-Integrar com sistemas internos da universidade
+### 🗝️ OpenAI
+Para embeddings ou uso de modelos da OpenAI, gere sua chave em: https://platform.openai.com  
+Também adicione no `config.py`
 
-🤝 Contribuindo
-Achou útil? Quer adaptar para sua universidade? Fique à vontade! Basta criar um fork e começar a voar com o Sabiá 🐤
+---
 
-📬 Contato
-Dúvidas, ideias ou sugestões? Mande uma mensagem ou abra uma issue!
+## ✨ Adapte Como Quiser!
+
+O Sabiá é flexível! Você pode:
+
+- Substituir o modelo por outro (Claude, Mixtral, Gemini etc.)
+- Usar outro vetorstore (FAISS, Pinecone, etc.)
+- Integrar com sistemas internos da universidade
+
+---
+
+## 🤝 Contribuindo
+
+Achou útil? Quer adaptar para sua instituição?  
+**Fique à vontade!** Basta criar um fork, modificar o que quiser e voar com o Sabiá 🐤
+
+---
+
+## 📬 Contato
+
+Dúvidas, ideias ou sugestões?  
+Abra uma *issue* ou mande uma mensagem por aqui mesmo no GitHub.
+
+---
+
+**Feito com 💚 por e para a comunidade acadêmica.**
