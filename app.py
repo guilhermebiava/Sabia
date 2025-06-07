@@ -80,7 +80,7 @@ if st.session_state['generated']:
             <div style='display: flex; justify-content: flex-end; margin-bottom: 0.8em;'>
                 <div style='display: flex; align-items: center;'>
                     <div style='margin-right: 8px; background: #e6e6e6; border-radius: 8px; padding: 6px 10px; font-size: 1em; text-align: right;'>{st.session_state['past'][i]}</div>
-                    <span style='font-size:1.3em;'>{'🙂'}</span>
+                    <span style='font-size:1.3em;'>{'👨‍💻'}</span>
                 </div>
             </div>
             """,
