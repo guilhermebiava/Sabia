@@ -74,16 +74,22 @@ Você pode:
 ### 1️⃣ Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/projeto-sabia.git
-cd projeto-sabia
+git clone https://github.com/usuario/sabia.git
+cd sabia
 git checkout -b minha-versao-sabia
 ```
 
 ### 2️⃣ Crie e ative o ambiente virtual:
 
-```bash
+> 💡 **Por que criar um ambiente virtual?**  
+> Esse passo é opcional, mas altamente recomendado. Um ambiente virtual isola as dependências do seu projeto, evitando conflitos com pacotes instalados globalmente no sistema. Isso facilita a manutenção, o compartilhamento do projeto com outras pessoas e evita erros inesperados ao trabalhar com múltiplos projetos Python.
+
+```python
 python -m venv venv
-.venv\Scripts\activate   # Windows
+# Ativando no Windows:
+.venv\Scripts\activate
+# Ativando no macOS/Linux:
+source venv/bin/activate
 ```
 
 ### 3️⃣ Instale as dependências:
@@ -114,7 +120,7 @@ streamlit run app.py
 ## 🧠 Treinando o Modelo com Seus Documentos
 
 1. Coloque seus **regulamentos, manuais e documentos institucionais** na pasta `/pdfs`
-2. Rode o script `ingest.py` para criar os embeddings com base nesses documentos
+2. O script `ingest.py` é rodado automaticamente quando a aplicação é executada, criando assim os embeddings com base nesses documentos.
 
 ---
 
@@ -127,7 +133,7 @@ streamlit run app.py
 3. O RAG consulta um **banco de dados vetorial** com documentos institucionais previamente particionados em trechos (chunks) e convertidos em embeddings.
 4. Após a busca por similaridade, o RAG retorna o **contexto relevante**.
 5. Esse contexto é combinado com a pergunta do usuário, formando um **prompt enriquecido**.
-6. O prompt é enviado para o modelo LLM (como GPT-4, Claude, etc.) que gera a resposta final.
+6. O prompt é enviado para o modelo LLM (como GPT-4, Gemini 2.0 Flash, etc.) que gera a resposta final.
 7. A resposta é devolvida para o usuário pela interface.
 
 ![Interface da aplicação](assets/estruturaAplicacao.png)
