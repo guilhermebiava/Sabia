@@ -149,12 +149,13 @@ Altere o template para definir:
 - Tom de voz (formal, casual, divertido...)
 - Persona (ex: professor, colega de classe, bot neutro...)
 
-### Resposta da IA – `rag.py`
+### Geração de respostas – `rag.py`
+
+O arquivo `rag.py` é responsável por gerar a resposta da IA utilizando a técnica de RAG (Retrieval-Augmented Generation). O fluxo geral é:
 
 ```python
 context = db.similarity_search_with_relevance_scores(user_query, k=3)
 context = list(filter(lambda x: x[1] >= 0.5, context))
-modelo = "gpt-4o-mini"
 ```
 
 Você pode:
