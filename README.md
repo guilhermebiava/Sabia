@@ -12,7 +12,7 @@ O Sabiá foi criado para resolver esse problema: um assistente virtual que centr
 ## 🌱 Por que “Sabiá”?
 
 
-O **sabiá** é uma ave amplamente admirada no Brasil, associada à beleza, liberdade e à conexão com a natureza é também conhecida como a Ave Nacional. Seu canto inspira sensibilidade e tradição, sendo frequentemente presente na cultura popular e na memória afetiva dos brasileiros. Além disso, seu canto é frequentemente associado à Comunicação. Escolher o nome “Sabiá” para este projeto é uma forma de homenagear esse símbolo nacional, reforçando os laços entre inovação tecnológica e identidade cultural. **O objetivo do Sabiá é promover o conhecimento de forma acessível e ampliar o acesso à informação no dia a dia de universitários, docentes e agentes admnistrativos.**
+O **sabiá** é uma ave amplamente admirada no Brasil, associada à beleza, liberdade e à conexão com a natureza, além de também ser conhecida como a Ave Nacional. Seu canto inspira sensibilidade e tradição, sendo frequentemente presente na cultura popular e na memória afetiva dos brasileiros. Seu canto também é frequentemente associado à Comunicação. Escolher o nome “Sabiá” para este projeto é uma forma de homenagear esse símbolo nacional, reforçando os laços entre inovação tecnológica e identidade cultural. **O objetivo do Sabiá é promover o conhecimento de forma acessível e ampliar o acesso à informação no dia a dia de universitários, docentes e agentes admnistrativos.**
 
 ---
 
