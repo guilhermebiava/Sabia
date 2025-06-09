@@ -26,7 +26,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-st.markdown('<div class="centered-header">Sabiá - Assistente Virtual da UTFPR</div>', unsafe_allow_html=True)
+st.markdown('<div class="centered-header">Sabiá - Assistente Virtual Universitário</div>', unsafe_allow_html=True)
 
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
