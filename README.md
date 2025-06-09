@@ -14,7 +14,7 @@ O Sabiá foi criado para resolver esse problema: um assistente virtual que centr
 ---
 
 ![Interface da aplicação](assets/Aplicacao.png)
-_**#ParaTodosVerem:** A imagem consiste na tela da aplicação Sabiá, que consiste na interface dessa aplicação. Na parte superior tem um título "Sabiá - Assistente Virtual". Mais abaixo, tem um exemplo de interação entre o usuário e o chatbot. Alinhado à direita, tem a pergunta do usuário "PERGUNTA" com um emoji de um estudante no computador. Alinhado à esquerda, tem a resposta do chatbot "RESPOSTA" com um emoji que representa um pássaro. Também tem um placeholder no final da resposta que indica o modelo de LLM que gerou a resposta. Mais abaixo, tem um campo para o usuário digitar sua pergunta e interagir com a aplicação, com um placeholder "Como eu posso ajudar hoje?"_
+_**#ParaTodosVerem:** A imagem consiste na tela da aplicação Sabiá, que consiste na interface dessa aplicação. Na parte superior tem um título "Sabiá - Assistente Virtual". Mais abaixo, tem um exemplo de interação entre o usuário e o chatbot. Alinhado à direita, tem a pergunta do usuário com um emoji de um estudante no computador. Alinhado à esquerda, tem a resposta do chatbot com um emoji que representa um pássaro. Também tem um placeholder no final da resposta que indica o modelo de LLM que gerou a resposta. Mais abaixo, tem um campo para o usuário digitar sua pergunta e interagir com a aplicação, com um placeholder "Como eu posso ajudar hoje?"_
 
 
 
@@ -120,11 +120,6 @@ streamlit run app.py
 
 ## 🔍 Arquitetura da Aplicação
 
-![Interface da aplicação](assets/estruturaAplicacao.png)
-
-> _**#ParaTodosVerem:** Diagrama da arquitetura da aplicação. À esquerda, há um ícone de usuário enviando uma pergunta para a aplicação (representada por um computador). Uma seta liga a aplicação a uma área destacada com fundo cinza pontilhado que representa o processo RAG (Retrieval-Augmented Generation). Dentro dessa área, há um ícone de lupa sobre documentos representando a busca por similaridade. Essa lupa está conectada por uma seta ao banco de dados vetorial, representado por um cilindro, que por sua vez recebe uma seta vinda de ícones de "chunks" de texto convertidos em embeddings — originados a partir de documentos institucionais. Após a busca por similaridade, uma seta retorna do ícone de busca para a aplicação, com o contexto recuperado pelo RAG. Outra seta parte da aplicação rumo a um ícone que representa o LLM carregando a pergunta do usuário enriquecida com o contexto recuperado. Por fim, uma nova seta traz a resposta gerada pelo LLM de volta para a aplicação, que exibe a resposta ao usuário._
-
-
 ### 🧩 Como Funciona:
 
 1. O usuário envia uma pergunta pela interface.
@@ -134,6 +129,10 @@ streamlit run app.py
 5. Esse contexto é combinado com a pergunta do usuário, formando um **prompt enriquecido**.
 6. O prompt é enviado para o modelo LLM (como GPT-4, Claude, etc.) que gera a resposta final.
 7. A resposta é devolvida para o usuário pela interface.
+
+![Interface da aplicação](assets/estruturaAplicacao.png)
+
+> _**#ParaTodosVerem:** Diagrama da arquitetura da aplicação. À esquerda, há um ícone de usuário enviando uma pergunta para a aplicação (representada por um computador). Uma seta liga a aplicação a uma área destacada com fundo cinza pontilhado que representa o processo RAG (Retrieval-Augmented Generation). Dentro dessa área, há um ícone de lupa sobre documentos representando a busca por similaridade. Essa lupa está conectada por uma seta ao banco de dados vetorial, representado por um cilindro, que por sua vez recebe uma seta vinda de ícones de "chunks" de texto convertidos em embeddings — originados a partir de documentos institucionais. Após a busca por similaridade, uma seta retorna do ícone de busca para a aplicação, com o contexto recuperado pelo RAG. Outra seta parte da aplicação rumo a um ícone que representa o LLM carregando a pergunta do usuário enriquecida com o contexto recuperado. Por fim, uma nova seta traz a resposta gerada pelo LLM de volta para a aplicação, que exibe a resposta ao usuário._
 
 ---
 
