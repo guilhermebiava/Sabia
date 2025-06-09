@@ -11,7 +11,13 @@ def gerar_resposta(user_query, db, modelo="gpt-4o-mini"):
     if not context:
         return "Eu não sou capaz de responder a essa pergunta."
 
-    contexto_formatado = "\n\n".join([
+    system_message = (
+        "Você é um assistente virtual especializado em responder perguntas com base em documentos fornecidos. "
+        "Use o contexto fornecido para responder à pergunta do usuário de forma clara e concisa."
+        "Retorne somente a resposta para a pergunta realizada, sem expor o contexto ou qualquer outra informação adicional, como por exemplo o pensamento para responder a pergunta.\n\n"
+    )
+
+    contexto_formatado = system_message+"\n\n".join([
         f"## Documento {k}\n{doc[0].page_content}\nSource: {doc[0].metadata.get('source', '')}"
         for k, doc in enumerate(context, start=1)
     ])
