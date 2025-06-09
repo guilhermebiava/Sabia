@@ -1,11 +1,6 @@
 
 # 🐦 Sabiá – Assistente Virtual Universitário
 
-**Feito com 💚 por e para a comunidade acadêmica.**
-
-![Interface da aplicação](assets/Aplicacao.png)
-**#ParaTodosVerem:** A imagem consiste na tela da aplicação Sabiá, que consiste na interface dessa aplicação. Na parte superior tem um título "Sabiá - Assistente Virtual". Mais abaixo, tem um exemplo de interação entre o usuário e o chatbot. Alinhado à direita, tem a pergunta do usuário "PERGUNTA" com um emoji de um estudante no computador. Alinhado à esquerda, tem a resposta do chatbot "RESPOSTA" com um emoji que representa um pássaro. Também tem um placeholder no final da resposta que indica o modelo de LLM que gerou a resposta. Mais abaixo, tem um campo para o usuário digitar sua pergunta e interagir com a aplicação, com um placeholder "Como eu posso ajudar hoje?"
-
 ---
 
 ## 🌱 Por que “Sabiá”?
@@ -14,7 +9,14 @@ No dia a dia acadêmico, informações importantes costumam estar espalhadas por
 
 O Sabiá foi criado para resolver esse problema: um assistente virtual que centraliza o conhecimento institucional de forma clara, acessível e inteligente. Seu nome foi escolhido por remeter ideias como leveza, clareza e comunicação — qualidades ideais para um chatbot no ambiente acadêmico. O Sabiá oferece respostas rápidas e confiáveis, promovendo uma experiência mais fluida, eficiente e acolhedora para toda a comunidade universitária.
 
+**Este projeto foi feito com ❤️ por e para a comunidade acadêmica.**
+
 ---
+
+![Interface da aplicação](assets/Aplicacao.png)
+**#ParaTodosVerem:** A imagem consiste na tela da aplicação Sabiá, que consiste na interface dessa aplicação. Na parte superior tem um título "Sabiá - Assistente Virtual". Mais abaixo, tem um exemplo de interação entre o usuário e o chatbot. Alinhado à direita, tem a pergunta do usuário "PERGUNTA" com um emoji de um estudante no computador. Alinhado à esquerda, tem a resposta do chatbot "RESPOSTA" com um emoji que representa um pássaro. Também tem um placeholder no final da resposta que indica o modelo de LLM que gerou a resposta. Mais abaixo, tem um campo para o usuário digitar sua pergunta e interagir com a aplicação, com um placeholder "Como eu posso ajudar hoje?"
+
+
 
 ## 🚀 Sobre o Projeto
 
