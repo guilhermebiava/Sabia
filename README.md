@@ -1,15 +1,18 @@
 
 # 🐦 Sabiá – Assistente Virtual Universitário
 
----
-
-## 🌱 Por que “Sabiá”?
-
 No dia a dia acadêmico, informações importantes costumam estar espalhadas por diferentes documentos, regulamentos, sistemas e sites institucionais. Isso pode dificultar o acesso e a compreensão para estudantes, professores e agentes administrativos, especialmente quando há prazos, dúvidas urgentes ou processos pouco intuitivos.
 
 O Sabiá foi criado para resolver esse problema: um assistente virtual que centraliza o conhecimento institucional de forma clara, acessível e inteligente. Seu nome foi escolhido por remeter ideias como leveza, clareza e comunicação — qualidades ideais para um chatbot no ambiente acadêmico. O Sabiá oferece respostas rápidas e confiáveis, promovendo uma experiência mais fluida, eficiente e acolhedora para toda a comunidade universitária.
 
 **Este projeto foi feito com ❤️ por e para a comunidade acadêmica.**
+
+---
+
+## 🌱 Por que “Sabiá”?
+
+
+O **sabiá** é uma ave amplamente admirada no Paraná, associada à beleza, liberdade e à conexão com a natureza. Seu canto inspira sensibilidade e tradição, sendo frequentemente presente na cultura popular e na memória afetiva dos paranaenses. Escolher o nome “Sabiá” para este projeto é uma forma de homenagear esse símbolo regional, reforçando os laços entre inovação tecnológica e identidade cultural. **O objetivo do Sabiá é promover o conhecimento de forma acessível para toda a comunidade acadêmica.**
 
 ---
 
